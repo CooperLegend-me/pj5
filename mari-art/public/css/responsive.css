@@ -1,0 +1,1389 @@
+/* Адаптивные стили */
+
+/* Общие стили для мобильного меню */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1001;
+}
+
+.burger-line {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Стили для мобильного меню */
+@media (max-width: 760px) {
+    .header-12 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1001;
+        padding: 10px 0;
+    }
+
+    .container-12 {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* Показываем бургер-меню */
+    .burger-menu {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1002;
+    }
+
+    .burger-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Скрываем обычное меню */
+    .nav-list-12 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(8, 55, 61, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-list-12.active {
+        display: flex;
+    }
+
+    .nav-list-12 li {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .nav-list-12 a {
+        color: #fff;
+        font-size: 16px;
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list-12 a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Анимация бургер-меню */
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Блокировка прокрутки при открытом меню */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Стили для главной страницы */
+    .hero {
+        margin-top: 0;
+        min-height: calc(100vh - 70px);
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px auto;
+        display: block;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        font-size: 13px;
+    }
+}
+
+/* Стили для чата */
+@media (max-width: 760px) {
+    .chat-container {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+
+    .messages {
+        max-height: 300px;
+        padding: 10px;
+    }
+
+    .message {
+        padding: 8px;
+        margin: 5px 0;
+    }
+
+    .message-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .message-name {
+        margin-bottom: 5px;
+    }
+
+    .message-time {
+        font-size: 12px;
+    }
+
+    .message-content {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .chat-form {
+        padding: 10px;
+    }
+
+    .chat-input {
+        width: calc(100% - 70px);
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .chat-send-btn {
+        width: 60px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .container-12 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    .logo-12 {
+        max-width: 70%;
+    }
+
+    .nav-list-12 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(8, 55, 61, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-list-12.active {
+        display: flex;
+    }
+
+    .nav-list-12 li {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .nav-list-12 a {
+        color: #fff;
+        font-size: 16px;
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list-12 a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Анимация бургер-меню */
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Блокировка прокрутки при открытом меню */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        margin: 5px 0;
+    }
+
+    .messages {
+        max-height: 250px;
+        padding: 8px;
+    }
+
+    .message {
+        padding: 6px;
+        margin: 4px 0;
+    }
+
+    .message-content {
+        font-size: 13px;
+    }
+
+    .chat-form {
+        padding: 8px;
+    }
+
+    .chat-input {
+        width: calc(100% - 60px);
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .chat-send-btn {
+        width: 50px;
+        padding: 6px;
+        font-size: 13px;
+    }
+}
+
+/* Стили для форм авторизации */
+@media (max-width: 760px) {
+    .auth-modal-23 {
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .auth-modal-content-23 {
+        width: 95%;
+        max-width: 400px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .auth-tabs-23 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .auth-tab-btn-23 {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        color: #666;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .auth-tab-btn-23.active {
+        color: #354059;
+        border-bottom: 2px solid #354059;
+    }
+
+    .auth-form-23 {
+        display: none;
+    }
+
+    .auth-form-23.active {
+        display: block;
+    }
+
+    .auth-form-group-23 {
+        margin-bottom: 20px;
+    }
+
+    .auth-form-group-23 label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #354059;
+    }
+
+    .auth-form-group-23 input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+    }
+
+    .auth-form-group-23 input:focus {
+        border-color: #354059;
+        outline: none;
+    }
+
+    .auth-submit-btn-23 {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        color: #fff;
+        background: #354059;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .auth-submit-btn-23:hover {
+        background: #2a3347;
+    }
+
+    .auth-close-23 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: #666;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .account-container-23 {
+        padding: 15px;
+    }
+
+    .account-header-23 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .account-header-23 h2 {
+        font-size: 20px;
+    }
+
+    .account-logout-btn-23 {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .account-user-info-23 h3 {
+        font-size: 16px;
+    }
+
+    .account-user-info-23 p {
+        font-size: 14px;
+    }
+
+    .account-projects-23 h3 {
+        font-size: 16px;
+    }
+
+    .account-projects-list-23 {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .account-project-item-23 {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-modal-content-23 {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .auth-tab-btn-23 {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .auth-form-group-23 label {
+        font-size: 13px;
+    }
+
+    .auth-form-group-23 input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .auth-submit-btn-23 {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .account-header-23 h2 {
+        font-size: 18px;
+    }
+
+    .account-user-info-23 h3 {
+        font-size: 15px;
+    }
+
+    .account-user-info-23 p {
+        font-size: 13px;
+    }
+}
+
+/* Стили для секции услуг и портфолио */
+@media (max-width: 760px) {
+    .services {
+        padding: 20px 10px;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .service {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .service img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 15px;
+        display: block;
+    }
+
+    .service h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .service p {
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    /* Стили для портфолио */
+    .project-slider {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-slider .project {
+        width: 100%;
+        margin: 0;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .project-slider .project img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Модальное окно для портфолио */
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-width: 500px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+        object-fit: contain;
+    }
+
+    .close {
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        padding: 10px;
+    }
+
+    .service img {
+        max-width: 250px;
+    }
+
+    .service h3 {
+        font-size: 16px;
+    }
+
+    .service p {
+        font-size: 13px;
+    }
+
+    .project-slider .project {
+        aspect-ratio: 4/3;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    .modal-image {
+        max-height: 70vh;
+    }
+
+    .close {
+        font-size: 20px;
+    }
+}
+
+/* Стили для средних планшетов */
+@media (min-width: 481px) and (max-width: 760px) {
+    .slider {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .project-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Стили для больших планшетов */
+@media (min-width: 761px) and (max-width: 1024px) {
+    .slider {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .project-slider {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Стили для футера */
+@media (max-width: 760px) {
+    footer {
+        padding: 20px 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 15px 10px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .footer-info p {
+        font-size: 11px;
+    }
+}
+
+/* Стили для планшетов и мобильных устройств */
+@media (max-width: 760px) {
+    /* Адаптивные стили для контейнеров */
+    .container, .container-12, .container-78 {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    /* Адаптивные стили для секций */
+    .services, .auth-section, .testimonials, 
+    .faq, .about, .contact {
+        padding: 20px 10px;
+        margin: 10px 0;
+    }
+
+    /* Адаптивные стили для слайдера */
+    .slider {
+        padding: 0 10px;
+    }
+
+    .service {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Адаптивные стили для форм */
+    .auth-forms {
+        flex-direction: column;
+    }
+
+    .auth-forms form {
+        margin: 10px 0;
+    }
+
+    /* Адаптивные стили для чата */
+    .chat-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .chat-messages {
+        max-height: 300px;
+    }
+
+    .chat-input {
+        width: 100%;
+    }
+
+    .maric-calc-wrapper {
+        padding: 10px;
+    }
+
+    .maric-calc-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .maric-calc-header {
+        padding: 10px;
+    }
+
+    .maric-calc-title {
+        font-size: 24px;
+    }
+
+    .maric-calc-subtitle {
+        font-size: 16px;
+    }
+
+    .maric-calc-body {
+        padding: 10px;
+    }
+
+    .maric-calc-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .maric-form-group {
+        margin-bottom: 15px;
+    }
+
+    .maric-form-input,
+    .maric-form-select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .maric-form-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .maric-results {
+        padding: 15px;
+    }
+
+    .maric-results-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .maric-result-item {
+        padding: 10px;
+    }
+
+    .maric-result-total {
+        padding: 15px;
+        margin-top: 15px;
+    }
+}
+
+/* Стили для маленьких мобильных устройств */
+@media (max-width: 480px) {
+    /* Общие стили контейнера */
+    .container, .container-12, .container-78 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Скрываем секцию услуг */
+    .services {
+        display: none;
+    }
+
+    /* Стили для отзывов */
+    .testimonials {
+        padding: 15px 0;
+        margin: 0;
+    }
+
+    .testimonials h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .testimonial-slider {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-content {
+        padding: 0;
+    }
+
+    .testimonial-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin: 0 auto 10px;
+        border-radius: 50%;
+        margin-right: 0;
+    }
+
+    .testimonial-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .testimonial-text {
+        font-size: 12px;
+        line-height: 1.4;
+        margin: 10px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .testimonial-name {
+        font-size: 10px;
+        margin: 5px 0;
+    }
+
+    .testimonial-rating {
+        text-align: center;
+    }
+
+    .testimonial-author {
+        font-size: 11px;
+        margin-top: 5px;
+        text-align: center;
+        white-space: normal;
+        word-break: break-word;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    /* Отключаем модальное окно для изображений */
+    .project img {
+        pointer-events: none;
+    }
+
+    .modal {
+        display: none !important;
+    }
+}
+
+/* Стили для устройств с маленькой высотой экрана */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 300px;
+        padding: 40px 10px;
+    }
+
+    .nav-list-12.active {
+        padding: 20px 0;
+        overflow-y: auto;
+    }
+
+    .nav-list-12 li {
+        margin: 10px 0;
+    }
+}
+
+/* Стили для больших планшетов */
+@media (min-width: 761px) and (max-width: 1024px) {
+    .container, .container-12, .container-78 {
+        width: 90%;
+    }
+
+    .service {
+        width: calc(33.33% - 20px);
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+}
+
+/* Стили для секции услуг и отзывов на маленьких экранах */
+@media (max-width: 480px) {
+    /* Общие стили контейнера */
+    .container, .container-12, .container-78 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Скрываем секцию услуг */
+    .services {
+        display: none;
+    }
+
+    /* Стили для отзывов */
+    .testimonials {
+        padding: 15px 0;
+        margin: 0;
+    }
+
+    .testimonials h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .testimonial-slider {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-content {
+        padding: 0;
+    }
+
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin: 0 auto 10px;
+        border-radius: 50%;
+    }
+
+    .testimonial-text {
+        font-size: 12px;
+        line-height: 1.4;
+        margin: 10px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+    .testimonial-name {
+        font-size: 10px;
+    }
+
+    .testimonial-author {
+        font-size: 11px;
+        margin-top: 5px;
+        text-align: center;
+        white-space: normal;
+        word-break: break-word;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    /* Отключаем модальное окно для изображений */
+    .project img {
+        pointer-events: none;
+    }
+
+    .modal {
+        display: none !important;
+    }
+}
+
+/* Стили для очень маленьких экранов */
+@media (max-width: 360px) {
+    .testimonial {
+        padding: 10px;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    .testimonial-text {
+        font-size: 11px;
+        -webkit-line-clamp: 3;
+        margin: 8px 0;
+    }
+
+    .testimonial-name {
+        font-size: 10px;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+
+    .testimonial-rating {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+
+    .testimonial-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .testimonial-info {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .testimonial-content {
+        padding: 0 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    .footer-info p {
+        font-size: 10px;
+    }
+}
+
+/* Стили для десктопа и планшетов */
+@media (max-width: 1440px) {
+    .header-12 {
+        position: relative;
+    }
+
+    .container-12 {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* Показываем бургер-меню */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 18px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .burger-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Скрываем обычное меню */
+    .nav-list-12 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(8, 55, 61, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-list-12.active {
+        display: flex;
+    }
+
+    .nav-list-12 li {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .nav-list-12 a {
+        color: #fff;
+        font-size: 16px;
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list-12 a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Анимация бургер-меню */
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Блокировка прокрутки при открытом меню */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Скрываем все кнопки в хедере */
+    .header-buttons {
+        display: none;
+    }
+}
+
+/* Стили для футера на маленьких экранах */
+@media (max-width: 480px) {
+    /* Общие стили для страницы */
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+
+    /* Стили для футера */
+    footer {
+        flex-shrink: 0;
+        margin-top: auto;
+        width: 100%;
+        background: #08373d;
+        padding: 15px 0;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-info p {
+        font-size: 11px;
+        margin: 0;
+    }
+}
+
+/* Стили для планшетов и десктопов */
+@media (min-width: 761px) {
+    .burger-menu {
+        display: none !important;
+    }
+
+    .nav-list-12 {
+        display: flex !important;
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-list-12 li {
+        margin: 0 10px;
+        width: auto;
+    }
+
+    .nav-list-12 a {
+        color: #fff;
+        font-size: 16px;
+        padding: 8px 15px;
+        display: inline-block;
+        width: auto;
+        background: none;
+    }
+
+    .nav-list-12 a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+    }
+}
+
+/* Стили для планшетов и малых десктопов */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .maric-bg-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .maric-bg-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    .maric-bg-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 55, 61, 0.85);
+    }
+
+    .container, .container-12, .container-78 {
+        position: relative;
+        z-index: 2;
+    }
+
+    .header-12 {
+        position: relative;
+        z-index: 3;
+        background-color: rgba(8, 55, 61, 0.95);
+    }
+
+    main {
+        position: relative;
+        z-index: 1;
+    }
+
+    .services, .testimonials, .about, .contact {
+        position: relative;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.97);
+    }
+} 
