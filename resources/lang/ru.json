@@ -1,0 +1,18 @@
+{
+    "These credentials do not match our records.": "Неверный email или пароль.",
+    "The provided password is incorrect.": "Указан неверный пароль.",
+    "Too many login attempts. Please try again in :seconds seconds.": "Слишком много попыток входа. Пожалуйста, попробуйте через :seconds секунд.",
+    "Please wait before retrying.": "Пожалуйста, подождите перед повторной попыткой.",
+    "Login": "Войти",
+    "Register": "Регистрация",
+    "Logout": "Выйти",
+    "Remember Me": "Запомнить меня",
+    "Forgot Your Password?": "Забыли пароль?",
+    "Reset Password": "Сбросить пароль",
+    "Send Password Reset Link": "Отправить ссылку для сброса пароля",
+    "Confirm Password": "Подтвердите пароль",
+    "Please confirm your password before continuing.": "Пожалуйста, подтвердите пароль, прежде чем продолжить.",
+    "Password": "Пароль",
+    "Email Address": "Email адрес",
+    "Name": "Имя"
+} 
