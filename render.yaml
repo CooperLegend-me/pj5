@@ -2,7 +2,7 @@ services:
   - type: web
     name: mari-art
     env: docker
-    dockerfilePath: Dockerfile
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: APP_NAME
         value: Mari-Art
@@ -10,6 +10,8 @@ services:
         value: production
       - key: APP_DEBUG
         value: false
+      - key: APP_KEY
+        generateValue: true
       - key: APP_URL
         fromService:
           type: web

@@ -2196,3 +2196,10 @@ footer {
     }
 }
 
+/* Скрытие секции услуг при ширине экрана меньше 1200px */
+@media (max-width: 1199px) {
+    .services {
+        display: none;
+    }
+}
+
